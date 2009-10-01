@@ -1,0 +1,81 @@
+package org.tohu.generator;
+ /*
+  * This package has been generated using Tohu Generator
+  * Do not modify by hand if you wish to regenerate
+  */
+import org.tohu.Questionnaire;
+import org.tohu.Group;
+import org.tohu.Question;
+import org.tohu.MultipleChoiceQuestion;
+
+rule "Multi_Choice_Question_Transmission_12"
+dialect "mvel"
+	when
+		$g : Group ( id == "Page-1", items == null || items not contains "Transmission" )
+	then
+		MultipleChoiceQuestion question = new MultipleChoiceQuestion("Transmission");
+		question.setPreLabel("Transmission");
+		question.setAnswerType("text");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Transmission" );
+		update( $g );		
+end
+
+rule "Multi_Choice_Question_Body-Type_11"
+dialect "mvel"
+	when
+		$g : Group ( id == "Page-1", items == null || items not contains "Body-Type" )
+	then
+		MultipleChoiceQuestion question = new MultipleChoiceQuestion("Body-Type");
+		question.setPreLabel("Body Type");
+		question.setAnswerType("text");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Body-Type" );
+		update( $g );		
+end
+
+rule "Multi_Choice_Question_Model_10"
+dialect "mvel"
+	when
+		$g : Group ( id == "Page-1", items == null || items not contains "Model" )
+	then
+		MultipleChoiceQuestion question = new MultipleChoiceQuestion("Model");
+		question.setPreLabel("Model");
+		question.setAnswerType("text");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Model" );
+		update( $g );		
+end
+
+rule "Multi_Choice_Question_Make_9"
+dialect "mvel"
+	when
+		$g : Group ( id == "Page-1", items == null || items not contains "Make" )
+	then
+		MultipleChoiceQuestion question = new MultipleChoiceQuestion("Make");
+		question.setPreLabel("Make");
+		question.setAnswerType("text");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Make" );
+		update( $g );		
+end
+
+rule "Multi_Choice_Question_Year_8"
+dialect "mvel"
+	when
+		$g : Group ( id == "Page-1", items == null || items not contains "Year" )
+	then
+		MultipleChoiceQuestion question = new MultipleChoiceQuestion("Year");
+		question.setPreLabel("Year");
+		question.setAnswerType("text");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Year" );
+		update( $g );		
+end
+
+

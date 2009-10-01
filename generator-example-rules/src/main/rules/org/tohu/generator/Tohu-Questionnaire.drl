@@ -1,0 +1,19 @@
+package org.tohu.generator;
+ /*
+  * This package has been generated using Tohu Generator
+  * Do not modify by hand if you wish to regenerate
+  */
+import org.tohu.Questionnaire;
+
+rule "Questionnaire_1"
+	when
+		// no conditions here
+	then
+		Questionnaire questionnaire = new Questionnaire("Example-Quote");
+		questionnaire.setLabel("A multi page questionnaire example");
+		questionnaire.setCompletionAction("extract.pdf");
+		questionnaire.setActiveItem("Page-1");
+		insertLogical(questionnaire);		
+end
+
+

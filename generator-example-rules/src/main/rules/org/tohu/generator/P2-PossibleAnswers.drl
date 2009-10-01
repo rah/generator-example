@@ -1,0 +1,12 @@
+package org.tohu.generator;
+ /*
+  * This package has been generated using Tohu Generator
+  * Do not modify by hand if you wish to regenerate
+  */
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.tohu.MultipleChoiceQuestion;
+import org.tohu.MultipleChoiceQuestion.PossibleAnswer;
+
+

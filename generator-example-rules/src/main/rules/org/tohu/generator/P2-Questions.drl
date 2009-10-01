@@ -1,0 +1,402 @@
+package org.tohu.generator;
+ /*
+  * This package has been generated using Tohu Generator
+  * Do not modify by hand if you wish to regenerate
+  */
+import org.tohu.Questionnaire;
+import org.tohu.Group;
+import org.tohu.Question;
+
+rule "Question_Mods_34"
+dialect "mvel"
+	when
+		$g : Group ( id == "Mods-Grp", items == null || items not contains "Mods" )
+	then
+		Question question = new Question("Mods");
+		question.setPreLabel("Have any modifications been made to your car?");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"radio"});
+		insert(question);
+		$g.addItem( "Mods" );
+		update( $g );		
+end
+
+rule "Question_Winch_33"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Winch" )
+	then
+		Question question = new Question("Winch");
+		question.setPreLabel("Winch");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Winch" );
+		update( $g );		
+end
+
+rule "Question_TV_32"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "TV" )
+	then
+		Question question = new Question("TV");
+		question.setPreLabel("TV");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "TV" );
+		update( $g );		
+end
+
+rule "Question_Towbar_31"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Towbar" )
+	then
+		Question question = new Question("Towbar");
+		question.setPreLabel("Towbar");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Towbar" );
+		update( $g );		
+end
+
+rule "Question_Tinted-windows_30"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Tinted-windows" )
+	then
+		Question question = new Question("Tinted-windows");
+		question.setPreLabel("Tinted windows");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Tinted-windows" );
+		update( $g );		
+end
+
+rule "Question_Sunroof_29"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Sunroof" )
+	then
+		Question question = new Question("Sunroof");
+		question.setPreLabel("Sunroof");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Sunroof" );
+		update( $g );		
+end
+
+rule "Question_Snorkel_28"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Snorkel" )
+	then
+		Question question = new Question("Snorkel");
+		question.setPreLabel("Snorkel");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Snorkel" );
+		update( $g );		
+end
+
+rule "Question_Side-steps_27"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Side-steps" )
+	then
+		Question question = new Question("Side-steps");
+		question.setPreLabel("Side steps");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Side-steps" );
+		update( $g );		
+end
+
+rule "Question_Seat-covers_26"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Seat-covers" )
+	then
+		Question question = new Question("Seat-covers");
+		question.setPreLabel("Seat covers");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Seat-covers" );
+		update( $g );		
+end
+
+rule "Question_Sat-track_25"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Sat-track" )
+	then
+		Question question = new Question("Sat-track");
+		question.setPreLabel("Satellite tracking security system");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Sat-track" );
+		update( $g );		
+end
+
+rule "Question_Sat-nav_24"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Sat-nav" )
+	then
+		Question question = new Question("Sat-nav");
+		question.setPreLabel("Satellite navigation");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Sat-nav" );
+		update( $g );		
+end
+
+rule "Question_Roof-racks_23"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Roof-racks" )
+	then
+		Question question = new Question("Roof-racks");
+		question.setPreLabel("Roof racks/Ski racks");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Roof-racks" );
+		update( $g );		
+end
+
+rule "Question_Reversing_22"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Reversing" )
+	then
+		Question question = new Question("Reversing");
+		question.setPreLabel("Reversing sensors/camera");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Reversing" );
+		update( $g );		
+end
+
+rule "Question_Paint-protec_21"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Right", items == null || items not contains "Paint-protec" )
+	then
+		Question question = new Question("Paint-protec");
+		question.setPreLabel("Paint protection");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Paint-protec" );
+		update( $g );		
+end
+
+rule "Question_Music-system_20"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Music-system" )
+	then
+		Question question = new Question("Music-system");
+		question.setPreLabel("Music system (covered for market value up to $1000)");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Music-system" );
+		update( $g );		
+end
+
+rule "Question_Lpg-conversion_19"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Lpg-conversion" )
+	then
+		Question question = new Question("Lpg-conversion");
+		question.setPreLabel("LPG conversion");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Lpg-conversion" );
+		update( $g );		
+end
+
+rule "Question_Immobiliser_18"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Immobiliser" )
+	then
+		Question question = new Question("Immobiliser");
+		question.setPreLabel("Immobiliser");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Immobiliser" );
+		update( $g );		
+end
+
+rule "Question_Floor-mats_17"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Floor-mats" )
+	then
+		Question question = new Question("Floor-mats");
+		question.setPreLabel("Floor mats");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Floor-mats" );
+		update( $g );		
+end
+
+rule "Question_Dvd-player_16"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Dvd-player" )
+	then
+		Question question = new Question("Dvd-player");
+		question.setPreLabel("DVD Player");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Dvd-player" );
+		update( $g );		
+end
+
+rule "Question_Driving-lights_15"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Driving-lights" )
+	then
+		Question question = new Question("Driving-lights");
+		question.setPreLabel("Driving lights");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Driving-lights" );
+		update( $g );		
+end
+
+rule "Question_Child-seat_14"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Child-seat" )
+	then
+		Question question = new Question("Child-seat");
+		question.setPreLabel("Child seat/capsule");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Child-seat" );
+		update( $g );		
+end
+
+rule "Question_Cargo_13"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Cargo" )
+	then
+		Question question = new Question("Cargo");
+		question.setPreLabel("Cargo barrier");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Cargo" );
+		update( $g );		
+end
+
+rule "Question_Canopy_12"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Canopy" )
+	then
+		Question question = new Question("Canopy");
+		question.setPreLabel("Canopy");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Canopy" );
+		update( $g );		
+end
+
+rule "Question_Bullbar_11"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Bullbar" )
+	then
+		Question question = new Question("Bullbar");
+		question.setPreLabel("Bullbar/Nudge bar");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Bullbar" );
+		update( $g );		
+end
+
+rule "Question_Protectors_10"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Protectors" )
+	then
+		Question question = new Question("Protectors");
+		question.setPreLabel("Bonnet/Headlight protectors");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Protectors" );
+		update( $g );		
+end
+
+rule "Question_Disabled-Alterations_9"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Disabled-Alterations" )
+	then
+		Question question = new Question("Disabled-Alterations");
+		question.setPreLabel("Alterations for disabled people");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Disabled-Alterations" );
+		update( $g );		
+end
+
+rule "Question_Alloy-Wheels_8"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Alloy-Wheels" )
+	then
+		Question question = new Question("Alloy-Wheels");
+		question.setPreLabel("Alloy Wheels");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Alloy-Wheels" );
+		update( $g );		
+end
+
+rule "Question_Alarm_7"
+dialect "mvel"
+	when
+		$g : Group ( id == "AM-Left", items == null || items not contains "Alarm" )
+	then
+		Question question = new Question("Alarm");
+		question.setPreLabel("Alarm");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Alarm" );
+		update( $g );		
+end
+
+

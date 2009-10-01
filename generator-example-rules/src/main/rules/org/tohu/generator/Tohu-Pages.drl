@@ -1,0 +1,114 @@
+package org.tohu.generator;
+ /*
+  * This package has been generated using Tohu Generator
+  * Do not modify by hand if you wish to regenerate
+  */
+import org.tohu.Questionnaire;
+import org.tohu.Group;
+import org.tohu.Question;
+
+rule "Page_Page-8_11"
+dialect "mvel"
+	when
+		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-8" )
+	then
+		Group group = new Group("Page-8");
+		group.setLabel("An extra test page for fun");
+		group.setPresentationStyles({"section"});
+		insert(group);
+		$questionnaire.addItem( "Page-8" );
+		update( $questionnaire );		
+end
+
+rule "Page_Page-7_10"
+dialect "mvel"
+	when
+		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-7" )
+	then
+		Group group = new Group("Page-7");
+		group.setLabel("7.Price");
+		group.setPresentationStyles({"section"});
+		insert(group);
+		$questionnaire.addItem( "Page-7" );
+		update( $questionnaire );		
+end
+
+rule "Page_Page-6_9"
+dialect "mvel"
+	when
+		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-6" )
+	then
+		Group group = new Group("Page-6");
+		group.setLabel("6.Drivers");
+		group.setPresentationStyles({"section"});
+		insert(group);
+		$questionnaire.addItem( "Page-6" );
+		update( $questionnaire );		
+end
+
+rule "Page_Page-5_8"
+dialect "mvel"
+	when
+		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-5" )
+	then
+		Group group = new Group("Page-5");
+		group.setLabel("5.Suburb");
+		group.setPresentationStyles({"section"});
+		insert(group);
+		$questionnaire.addItem( "Page-5" );
+		update( $questionnaire );		
+end
+
+rule "Page_Page-4_7"
+dialect "mvel"
+	when
+		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-4" )
+	then
+		Group group = new Group("Page-4");
+		group.setLabel("4.Value");
+		group.setPresentationStyles({"section"});
+		insert(group);
+		$questionnaire.addItem( "Page-4" );
+		update( $questionnaire );		
+end
+
+rule "Page_Page-3_6"
+dialect "mvel"
+	when
+		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-3" )
+	then
+		Group group = new Group("Page-3");
+		group.setLabel("3.Purchase");
+		group.setPresentationStyles({"section"});
+		insert(group);
+		$questionnaire.addItem( "Page-3" );
+		update( $questionnaire );		
+end
+
+rule "Page_Page-2_5"
+dialect "mvel"
+	when
+		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-2" )
+	then
+		Group group = new Group("Page-2");
+		group.setLabel("2.Extras");
+		group.setPresentationStyles({"section"});
+		insert(group);
+		$questionnaire.addItem( "Page-2" );
+		update( $questionnaire );		
+end
+
+rule "Page_Page-1_4"
+dialect "mvel"
+	when
+		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-1" )
+	then
+		Group group = new Group("Page-1");
+		group.setLabel("1.Car");
+		group.setPresentationStyles({"section"});
+		insert(group);
+		$questionnaire.addItem( "Page-1" );
+		update( $questionnaire );		
+end
+
+

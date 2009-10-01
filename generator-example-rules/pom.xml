@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>generator-example</artifactId>
+		<groupId>org.tohu.examples.generator</groupId>
+		<version>1.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>generator-example-rules</artifactId>
+
+	<packaging>jar</packaging>
+	<name>Tohu Examples :: Generator :: Rules</name>
+
+	<properties>
+		<drools.version>5.1.0.SNAPSHOT</drools.version>
+		<spreadsheet.resources.dir>src/main/resources</spreadsheet.resources.dir>
+		<spreadsheet.resource.name>TohuMultiPageExample.xls</spreadsheet.resource.name>
+		<control.worksheet>Control</control.worksheet>
+		<control.template>Control.drt</control.template>
+		<control.row>2</control.row>
+		<control.column>1</control.column>
+	</properties>
+
+
+	<build>
+		<finalName>generator-example-rules</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>src/main/rules</directory>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<configuration>
+							<tasks>
+								<java classname="org.tohu.generator.TohuTemplateRunner">
+									<arg
+										value="${basedir}/${spreadsheet.resources.dir}/${spreadsheet.resource.name}" />
+									<arg value="${control.worksheet}" />
+									<arg value="${control.template}" />
+									<arg value="${control.row}" />
+									<arg value="${control.column}" />
+									<classpath>
+										<pathelement
+											path="${settings.localRepository}/org/tohu/tohu-generator/1.0.1-SNAPSHOT/tohu-generator-1.0.1-SNAPSHOT.jar" />
+										<pathelement
+											path="${settings.localRepository}/jexcelapi/jxl/2.4.2/jxl-2.4.2.jar" />
+										<pathelement
+											path="${settings.localRepository}/org/mvel/mvel2/2.0.12/mvel2-2.0.12.jar" />
+										<pathelement
+											path="${settings.localRepository}/org/antlr/antlr-runtime/3.1.1/antlr-runtime-3.1.1.jar" />
+										<pathelement
+											path="${settings.localRepository}/org/drools/drools-api/${drools.version}/drools-api-${drools.version}.jar" />
+										<pathelement
+											path="${settings.localRepository}/org/drools/drools-core/${drools.version}/drools-core-${drools.version}.jar" />
+										<pathelement
+											path="${settings.localRepository}/org/drools/drools-compiler/${drools.version}/drools-compiler-${drools.version}.jar" />
+										<pathelement
+											path="${settings.localRepository}/org/drools/drools-decisiontables/${drools.version}/drools-decisiontables-${drools.version}.jar" />
+										<pathelement
+											path="${settings.localRepository}/org/drools/drools-templates/${drools.version}/drools-templates-${drools.version}.jar" />
+										<pathelement
+											path="${settings.localRepository}/org/eclipse/jdt/core/3.4.2.v_883_R34x/core-3.4.2.v_883_R34x.jar" />
+									</classpath>
+								</java>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<additionalBuildcommands>
+						<buildcommand>
+							org.drools.eclipse.droolsbuilder
+            </buildcommand>
+					</additionalBuildcommands>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-api</artifactId>
+			<version>${drools.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-compiler</artifactId>
+			<version>${drools.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-core</artifactId>
+			<version>${drools.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-decisiontables</artifactId>
+			<version>${drools.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-templates</artifactId>
+			<version>${drools.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.tohu</groupId>
+			<artifactId>tohu-core</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.tohu</groupId>
+			<artifactId>tohu-domain</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.tohu</groupId>
+			<artifactId>tohu-generator</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+</project>

@@ -1,0 +1,242 @@
+package org.tohu.generator;
+ /*
+  * This package has been generated using Tohu Generator
+  * Do not modify by hand if you wish to regenerate
+  */
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.tohu.MultipleChoiceQuestion;
+import org.tohu.MultipleChoiceQuestion.PossibleAnswer;
+
+rule "Possible_Answers_are_NULL_Transmission_4 SP AUTOMATIC 4x4_4 SP AUTOMATIC 4x4_27"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Transmission", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("4 SP AUTOMATIC 4x4", "4 SP AUTOMATIC 4x4");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Transmission_4 SP AUTOMATIC 4x4_4 SP AUTOMATIC 4x4_27"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Transmission", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*4 SP AUTOMATIC 4x4.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("4 SP AUTOMATIC 4x4", "4 SP AUTOMATIC 4x4");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Transmission_--- Please Select_--- Please Select_26"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Transmission", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("--- Please Select", "--- Please Select");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Transmission_--- Please Select_--- Please Select_26"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Transmission", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*--- Please Select.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("--- Please Select", "--- Please Select");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Body-Type_4D Wagon_4D Wagon_25"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Body-Type", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("4D Wagon", "4D Wagon");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Body-Type_4D Wagon_4D Wagon_25"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Body-Type", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*4D Wagon.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("4D Wagon", "4D Wagon");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Body-Type_--- Please Select_--- Please Select_24"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Body-Type", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("--- Please Select", "--- Please Select");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Body-Type_--- Please Select_--- Please Select_24"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Body-Type", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*--- Please Select.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("--- Please Select", "--- Please Select");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Model_CHEROKEE_CHEROKEE_23"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Model", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("CHEROKEE", "CHEROKEE");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Model_CHEROKEE_CHEROKEE_23"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Model", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*CHEROKEE.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("CHEROKEE", "CHEROKEE");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Model_--- Please Select_--- Please Select_22"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Model", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("--- Please Select", "--- Please Select");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Model_--- Please Select_--- Please Select_22"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Model", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*--- Please Select.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("--- Please Select", "--- Please Select");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Make_JEEP_JEEP_21"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Make", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("JEEP", "JEEP");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Make_JEEP_JEEP_21"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Make", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*JEEP.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("JEEP", "JEEP");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Make_--- Please Select_--- Please Select_20"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Make", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("--- Please Select", "--- Please Select");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Make_--- Please Select_--- Please Select_20"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Make", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*--- Please Select.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("--- Please Select", "--- Please Select");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_1996_1996_19"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("1996", "1996");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_1996_1996_19"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*1996.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("1996", "1996");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_--- Please Select_--- Please Select_18"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("--- Please Select", "--- Please Select");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_--- Please Select_--- Please Select_18"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*--- Please Select.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("--- Please Select", "--- Please Select");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+
