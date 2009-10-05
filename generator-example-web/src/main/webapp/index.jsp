@@ -13,9 +13,34 @@
     onQuestionnaireLoad("bodyContent", "generated");
   });
 </script>
-<title>Tohu Generator</title>
+<title>OSDC Tohu Presentation</title>
 </head>
 <body>
-<div id="bodyContent"></div>
+<div id="container">
+  <div id="header" class="centeredImage">
+   <img src="images/example_banner.png" width="930" title="to be defined"  />
+  </div>
+  <div id="wrapper">
+        <div id="bodyContent" class="innerPadding"></div>
+		<form>
+			<input type="button" value="Reset" onclick="resetDrools()" />
+		</form>
+  <div id="rightSideBar">
+    <div class="innerPadding"> 
+    <h3 id="actualTitle">&nbsp;</h3>
+    <img src="images/example_logo.gif" id="side-logo">
+        <div id="progressindicator" class="clearfix">
+        	&nbsp;
+        	<h3>Your Progress:</h3>
+          	<div id="progressbar">
+            	<p>&nbsp;</p>
+          	</div>
+        </div>      
+      <div id="helphint">
+        <p>Click the help buttons for assistance with a question</p>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
