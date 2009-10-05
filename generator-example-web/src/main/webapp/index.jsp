@@ -13,7 +13,7 @@
     onQuestionnaireLoad("bodyContent", "generated");
   });
 </script>
-<title>OSDC Tohu Presentation</title>
+<title>Tohu Generator Example</title>
 </head>
 <body>
 <div id="container">
