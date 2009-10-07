@@ -44,7 +44,7 @@
 						<phase>generate-sources</phase>
 						<configuration>
 							<tasks>
-								<java classname="org.tohu.generator.TohuTemplateRunner">
+								<java classname="org.tohu.generator.TohuTemplateRunner" fork="true">
 									<arg
 										value="${basedir}/${spreadsheet.resources.dir}/${spreadsheet.resource.name}" />
 									<arg value="${control.worksheet}" />

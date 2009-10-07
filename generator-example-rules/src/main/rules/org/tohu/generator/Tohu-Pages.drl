@@ -26,7 +26,7 @@ dialect "mvel"
 		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-7" )
 	then
 		Group group = new Group("Page-7");
-		group.setLabel("7.Price");
+		group.setLabel("Price");
 		group.setPresentationStyles({"section"});
 		insert(group);
 		$questionnaire.addItem( "Page-7" );
@@ -39,7 +39,7 @@ dialect "mvel"
 		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-6" )
 	then
 		Group group = new Group("Page-6");
-		group.setLabel("6.Drivers");
+		group.setLabel("Driver Details");
 		group.setPresentationStyles({"section"});
 		insert(group);
 		$questionnaire.addItem( "Page-6" );
@@ -52,7 +52,7 @@ dialect "mvel"
 		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-5" )
 	then
 		Group group = new Group("Page-5");
-		group.setLabel("5.Suburb");
+		group.setLabel("Suburb Located");
 		group.setPresentationStyles({"section"});
 		insert(group);
 		$questionnaire.addItem( "Page-5" );
@@ -65,7 +65,7 @@ dialect "mvel"
 		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-4" )
 	then
 		Group group = new Group("Page-4");
-		group.setLabel("4.Value");
+		group.setLabel("Vehicle Value");
 		group.setPresentationStyles({"section"});
 		insert(group);
 		$questionnaire.addItem( "Page-4" );
@@ -78,7 +78,7 @@ dialect "mvel"
 		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-3" )
 	then
 		Group group = new Group("Page-3");
-		group.setLabel("3.Purchase");
+		group.setLabel("Purchase Details");
 		group.setPresentationStyles({"section"});
 		insert(group);
 		$questionnaire.addItem( "Page-3" );
@@ -91,7 +91,7 @@ dialect "mvel"
 		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-2" )
 	then
 		Group group = new Group("Page-2");
-		group.setLabel("2.Extras");
+		group.setLabel("Extras Fitted");
 		group.setPresentationStyles({"section"});
 		insert(group);
 		$questionnaire.addItem( "Page-2" );
@@ -104,7 +104,7 @@ dialect "mvel"
 		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-1" )
 	then
 		Group group = new Group("Page-1");
-		group.setLabel("1.Car");
+		group.setLabel("Car Details");
 		group.setPresentationStyles({"section"});
 		insert(group);
 		$questionnaire.addItem( "Page-1" );

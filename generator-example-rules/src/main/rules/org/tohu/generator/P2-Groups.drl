@@ -27,7 +27,7 @@ dialect "mvel"
 	then
 		Group group = new Group("AM-Right");
 		group.setLabel("AM 2");
-		group.setPresentationStyles({"row"});
+		group.setPresentationStyles({"section"});
 		insert(group);
 		$group.addItem( "AM-Right" );
 		update( $group );		
@@ -40,7 +40,7 @@ dialect "mvel"
 	then
 		Group group = new Group("AM-Left");
 		group.setLabel("AM 1");
-		group.setPresentationStyles({"row"});
+		group.setPresentationStyles({"section"});
 		insert(group);
 		$group.addItem( "AM-Left" );
 		update( $group );		
