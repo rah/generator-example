@@ -90,7 +90,7 @@ div, p {
 	padding:0;
 }
 div.InvalidAnswer.requiredMissing {
-	display:none; 
+	display:none;
 }
 .money p {
 	display:none;

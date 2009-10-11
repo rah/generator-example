@@ -10,18 +10,11 @@
     
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/Tohu-Questionnaire.drl"/>
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/Tohu-Pages.drl"/>
-    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P1-Groups.drl"/>
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P1-Questions.drl"/>
-    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P1-Conditional.drl"/>
-    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P1-MultiChoiceQuestions.drl"/>
-    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P1-PossibleAnswers.drl"/>
-    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P1-HelpText.drl"/>
-    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P2-Groups.drl"/>
-    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P2-Questions.drl"/>
-    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P2-Conditional.drl"/>
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P2-MultiChoiceQuestions.drl"/>
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P2-PossibleAnswers.drl"/>
-    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P2-HelpText.drl"/>
+    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P3-Questions.drl"/>
+    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P3-Notes.drl"/>
 
   </add>
 </change-set>

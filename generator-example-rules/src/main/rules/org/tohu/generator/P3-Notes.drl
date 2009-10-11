@@ -1,0 +1,74 @@
+package org.tohu.generator;
+ /*
+  * This package has been generated using Tohu Generator
+  * Do not modify by hand if you wish to regenerate
+  */
+import org.tohu.Question;
+import org.tohu.Group;
+import org.tohu.Note;
+
+rule "Create_Note_example-expanded-tip_6"
+dialect "mvel"
+	when
+		$q : Question( id == "Note-Q-1" )
+		$g : Group (items != null && items contains "Note-Q-1")
+		not ( Note( id == "example-expanded-tip" ) )
+	then
+		Note note = new Note("example-expanded-tip", "This is an example of expanded help text. This will always appear after the question identified in the column Question ID.");
+		note.setPresentationStyles({"expandedTip"});
+		insert (note);		
+end
+rule "Insert_Tip_example-expanded-tip_6"
+dialect "mvel"
+	when
+		$q : Question( id == "Note-Q-1" )
+		$g : Group (items != null && items contains "Note-Q-1" && items not contains "example-expanded-tip")
+		$n : Note( id == "example-expanded-tip", (presentationStyles != null && presentationStyles contains "tip") )
+	then
+		$g.insertItem($n.getId(), $q.getId());
+		update ($g);
+end
+rule "Insert_Expanded_Tip_example-expanded-tip_6"
+dialect "mvel"
+	when
+		$q : Question( id == "Note-Q-1" )
+		$g : Group (items != null && items contains "Note-Q-1" && items not contains "example-expanded-tip")
+		$n : Note( id == "example-expanded-tip", (presentationStyles != null && presentationStyles contains "expandedTip") )
+	then
+		$g.appendItem($n.getId(), $q.getId());
+		update ($g);
+end
+
+rule "Create_Note_example-tip_5"
+dialect "mvel"
+	when
+		$q : Question( id == "Note-Q-1" )
+		$g : Group (items != null && items contains "Note-Q-1")
+		not ( Note( id == "example-tip" ) )
+	then
+		Note note = new Note("example-tip", "This is an example of a tip. When the help button alongside the question is clicked the help text is displayed.");
+		note.setPresentationStyles({"tip"});
+		insert (note);		
+end
+rule "Insert_Tip_example-tip_5"
+dialect "mvel"
+	when
+		$q : Question( id == "Note-Q-1" )
+		$g : Group (items != null && items contains "Note-Q-1" && items not contains "example-tip")
+		$n : Note( id == "example-tip", (presentationStyles != null && presentationStyles contains "tip") )
+	then
+		$g.insertItem($n.getId(), $q.getId());
+		update ($g);
+end
+rule "Insert_Expanded_Tip_example-tip_5"
+dialect "mvel"
+	when
+		$q : Question( id == "Note-Q-1" )
+		$g : Group (items != null && items contains "Note-Q-1" && items not contains "example-tip")
+		$n : Note( id == "example-tip", (presentationStyles != null && presentationStyles contains "expandedTip") )
+	then
+		$g.appendItem($n.getId(), $q.getId());
+		update ($g);
+end
+
+

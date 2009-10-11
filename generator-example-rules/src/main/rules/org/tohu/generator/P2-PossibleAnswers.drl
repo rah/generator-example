@@ -9,4 +9,763 @@ import java.util.List;
 import org.tohu.MultipleChoiceQuestion;
 import org.tohu.MultipleChoiceQuestion.PossibleAnswer;
 
+rule "Possible_Answers_are_NULL_Year_2009_2009_37"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("2009", "2009");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_2009_2009_37"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*2009.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("2009", "2009");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_2008_2008_36"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("2008", "2008");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_2008_2008_36"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*2008.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("2008", "2008");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_2007_2007_35"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("2007", "2007");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_2007_2007_35"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*2007.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("2007", "2007");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_2006_2006_34"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("2006", "2006");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_2006_2006_34"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*2006.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("2006", "2006");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_2005_2005_33"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("2005", "2005");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_2005_2005_33"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*2005.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("2005", "2005");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_2004_2004_32"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("2004", "2004");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_2004_2004_32"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*2004.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("2004", "2004");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_2003_2003_31"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("2003", "2003");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_2003_2003_31"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*2003.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("2003", "2003");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_2002_2002_30"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("2002", "2002");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_2002_2002_30"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*2002.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("2002", "2002");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_2001_2001_29"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("2001", "2001");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_2001_2001_29"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*2001.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("2001", "2001");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_2000_2000_28"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("2000", "2000");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_2000_2000_28"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*2000.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("2000", "2000");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Year_--- Please Select_--- Please Select_27"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("--- Please Select", "--- Please Select");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Year_--- Please Select_--- Please Select_27"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Year", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*--- Please Select.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("--- Please Select", "--- Please Select");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_December_December_26"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("December", "December");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_December_December_26"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*December.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("December", "December");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_November_November_25"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("November", "November");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_November_November_25"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*November.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("November", "November");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_October_October_24"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("October", "October");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_October_October_24"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*October.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("October", "October");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_September_September_23"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("September", "September");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_September_September_23"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*September.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("September", "September");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_August_August_22"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("August", "August");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_August_August_22"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*August.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("August", "August");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_July_July_21"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("July", "July");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_July_July_21"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*July.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("July", "July");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_June_June_20"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("June", "June");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_June_June_20"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*June.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("June", "June");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_May_May_19"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("May", "May");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_May_May_19"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*May.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("May", "May");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_April_April_18"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("April", "April");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_April_April_18"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*April.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("April", "April");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_March_March_17"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("March", "March");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_March_March_17"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*March.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("March", "March");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_February_February_16"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("February", "February");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_February_February_16"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*February.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("February", "February");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_January_January_15"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("January", "January");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_January_January_15"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*January.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("January", "January");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Month_--- Please Select_--- Please Select_14"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("--- Please Select", "--- Please Select");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Month_--- Please Select_--- Please Select_14"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Month", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*--- Please Select.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("--- Please Select", "--- Please Select");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Day_Sunday_Sunday_13"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("Sunday", "Sunday");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Day_Sunday_Sunday_13"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*Sunday.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("Sunday", "Sunday");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Day_Saturday_Saturday_12"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("Saturday", "Saturday");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Day_Saturday_Saturday_12"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*Saturday.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("Saturday", "Saturday");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Day_Friday_Friday_11"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("Friday", "Friday");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Day_Friday_Friday_11"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*Friday.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("Friday", "Friday");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Day_Thursday_Thursday_10"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("Thursday", "Thursday");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Day_Thursday_Thursday_10"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*Thursday.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("Thursday", "Thursday");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Day_Wednesday_Wednesday_9"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("Wednesday", "Wednesday");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Day_Wednesday_Wednesday_9"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*Wednesday.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("Wednesday", "Wednesday");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Day_Tuesday_Tuesday_8"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("Tuesday", "Tuesday");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Day_Tuesday_Tuesday_8"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*Tuesday.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("Tuesday", "Tuesday");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Day_Monday_Monday_7"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("Monday", "Monday");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Day_Monday_Monday_7"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*Monday.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("Monday", "Monday");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Day_--- Please Select_--- Please Select_6"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("--- Please Select", "--- Please Select");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Day_--- Please Select_--- Please Select_6"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Day", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*--- Please Select.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("--- Please Select", "--- Please Select");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
+rule "Possible_Answers_are_NULL_Multi-Choice ID_Value_Label_5"
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Multi-Choice ID", possibleAnswers == null )  
+	then
+		org.tohu.MultipleChoiceQuestion.PossibleAnswer[] answers = new PossibleAnswer[1];
+		answers[0] = new PossibleAnswer("Value", "Label");		
+		$mcq.setPossibleAnswers(answers);		
+		update( $mcq );		
+end
+rule "Possible_Answers_not_NULL_Multi-Choice ID_Value_Label_5"
+no-loop
+dialect "java"
+	when
+		$mcq : MultipleChoiceQuestion ( id == "Multi-Choice ID", $pas : possibleAnswers != null, possibleAnswersAsString not matches ".*Value.*")
+	then
+		PossibleAnswer newAnswer = new PossibleAnswer("Value", "Label");
+		List<PossibleAnswer> possibleAnswerList = new ArrayList<PossibleAnswer>(Arrays.asList($pas));
+		possibleAnswerList.add(newAnswer);
+		$mcq.setPossibleAnswers(possibleAnswerList.toArray());
+		update( $mcq );		
+end
+
 

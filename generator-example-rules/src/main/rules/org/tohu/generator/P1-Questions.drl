@@ -7,4 +7,94 @@ import org.tohu.Questionnaire;
 import org.tohu.Group;
 import org.tohu.Question;
 
+rule "Question_Date-Q_6"
+dialect "mvel"
+	when
+		$g : Group ( id == "Simple-Questions", items == null || items not contains "Date-Q" )
+	then
+		Question question = new Question("Date-Q");
+		question.setPreLabel("A date question");
+		question.setAnswerType("date");
+		question.setPresentationStyles({"none"});
+		question.setRequired(false);
+		insert(question);
+		$g.addItem( "Date-Q" );
+		update( $g );		
+end
+
+rule "Question_Boolean-Q2_5"
+dialect "mvel"
+	when
+		$g : Group ( id == "Simple-Questions", items == null || items not contains "Boolean-Q2" )
+	then
+		Question question = new Question("Boolean-Q2");
+		question.setPreLabel("Another boolean radio style question");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"radio"});
+		question.setRequired(false);
+		insert(question);
+		$g.addItem( "Boolean-Q2" );
+		update( $g );		
+end
+
+rule "Question_Boolean-Q_4"
+dialect "mvel"
+	when
+		$g : Group ( id == "Simple-Questions", items == null || items not contains "Boolean-Q" )
+	then
+		Question question = new Question("Boolean-Q");
+		question.setPreLabel("A boolean checkbox style question");
+		question.setAnswerType("boolean");
+		question.setPresentationStyles({"none"});
+		question.setRequired(false);
+		insert(question);
+		$g.addItem( "Boolean-Q" );
+		update( $g );		
+end
+
+rule "Question_Number-Q_3"
+dialect "mvel"
+	when
+		$g : Group ( id == "Simple-Questions", items == null || items not contains "Number-Q" )
+	then
+		Question question = new Question("Number-Q");
+		question.setPreLabel("A number question");
+		question.setAnswerType("number");
+		question.setPresentationStyles({"none"});
+		question.setRequired(false);
+		insert(question);
+		$g.addItem( "Number-Q" );
+		update( $g );		
+end
+
+rule "Question_Text-Q-Required_2"
+dialect "mvel"
+	when
+		$g : Group ( id == "Simple-Questions", items == null || items not contains "Text-Q-Required" )
+	then
+		Question question = new Question("Text-Q-Required");
+		question.setPreLabel("This question must be answered");
+		question.setAnswerType("text");
+		question.setPresentationStyles({"none"});
+		question.setRequired(true);
+		insert(question);
+		$g.addItem( "Text-Q-Required" );
+		update( $g );		
+end
+
+rule "Question_Text-Q_1"
+dialect "mvel"
+	when
+		$g : Group ( id == "Simple-Questions", items == null || items not contains "Text-Q" )
+	then
+		Question question = new Question("Text-Q");
+		question.setPreLabel("A text question");
+		question.setAnswerType("text");
+		question.setPresentationStyles({"none"});
+		question.setRequired(false);
+		insert(question);
+		$g.addItem( "Text-Q" );
+		update( $g );		
+end
+
 

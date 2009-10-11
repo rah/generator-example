@@ -8,4 +8,46 @@ import org.tohu.Group;
 import org.tohu.Question;
 import org.tohu.MultipleChoiceQuestion;
 
+rule "Multi_Choice_Question_Year_3"
+dialect "mvel"
+	when
+		$g : Group ( id == "Multi-Choice-Questions", items == null || items not contains "Year" )
+	then
+		MultipleChoiceQuestion question = new MultipleChoiceQuestion("Year");
+		question.setPreLabel("Year");
+		question.setAnswerType("text");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Year" );
+		update( $g );		
+end
+
+rule "Multi_Choice_Question_Month_2"
+dialect "mvel"
+	when
+		$g : Group ( id == "Multi-Choice-Questions", items == null || items not contains "Month" )
+	then
+		MultipleChoiceQuestion question = new MultipleChoiceQuestion("Month");
+		question.setPreLabel("Month");
+		question.setAnswerType("text");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Month" );
+		update( $g );		
+end
+
+rule "Multi_Choice_Question_Day_1"
+dialect "mvel"
+	when
+		$g : Group ( id == "Multi-Choice-Questions", items == null || items not contains "Day" )
+	then
+		MultipleChoiceQuestion question = new MultipleChoiceQuestion("Day");
+		question.setPreLabel("Day");
+		question.setAnswerType("text");
+		question.setPresentationStyles({"none"});
+		insert(question);
+		$g.addItem( "Day" );
+		update( $g );		
+end
+
 

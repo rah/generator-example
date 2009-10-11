@@ -7,107 +7,42 @@ import org.tohu.Questionnaire;
 import org.tohu.Group;
 import org.tohu.Question;
 
-rule "Page_Page-8_11"
+rule "Page_Notes_6"
 dialect "mvel"
 	when
-		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-8" )
+		$questionnaire : Questionnaire ( id == "Example-Generator", items == null || items not contains "Notes" )
 	then
-		Group group = new Group("Page-8");
-		group.setLabel("An extra test page for fun");
+		Group group = new Group("Notes");
+		group.setLabel("Example Notes against questions");
 		group.setPresentationStyles({"section"});
 		insert(group);
-		$questionnaire.addItem( "Page-8" );
+		$questionnaire.addItem( "Notes" );
 		update( $questionnaire );		
 end
 
-rule "Page_Page-7_10"
+rule "Page_Multi-Choice-Questions_5"
 dialect "mvel"
 	when
-		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-7" )
+		$questionnaire : Questionnaire ( id == "Example-Generator", items == null || items not contains "Multi-Choice-Questions" )
 	then
-		Group group = new Group("Page-7");
-		group.setLabel("Price");
+		Group group = new Group("Multi-Choice-Questions");
+		group.setLabel("Example Multi Choice Questions");
 		group.setPresentationStyles({"section"});
 		insert(group);
-		$questionnaire.addItem( "Page-7" );
+		$questionnaire.addItem( "Multi-Choice-Questions" );
 		update( $questionnaire );		
 end
 
-rule "Page_Page-6_9"
+rule "Page_Simple-Questions_4"
 dialect "mvel"
 	when
-		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-6" )
+		$questionnaire : Questionnaire ( id == "Example-Generator", items == null || items not contains "Simple-Questions" )
 	then
-		Group group = new Group("Page-6");
-		group.setLabel("Driver Details");
+		Group group = new Group("Simple-Questions");
+		group.setLabel("Example Simple Questions");
 		group.setPresentationStyles({"section"});
 		insert(group);
-		$questionnaire.addItem( "Page-6" );
-		update( $questionnaire );		
-end
-
-rule "Page_Page-5_8"
-dialect "mvel"
-	when
-		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-5" )
-	then
-		Group group = new Group("Page-5");
-		group.setLabel("Suburb Located");
-		group.setPresentationStyles({"section"});
-		insert(group);
-		$questionnaire.addItem( "Page-5" );
-		update( $questionnaire );		
-end
-
-rule "Page_Page-4_7"
-dialect "mvel"
-	when
-		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-4" )
-	then
-		Group group = new Group("Page-4");
-		group.setLabel("Vehicle Value");
-		group.setPresentationStyles({"section"});
-		insert(group);
-		$questionnaire.addItem( "Page-4" );
-		update( $questionnaire );		
-end
-
-rule "Page_Page-3_6"
-dialect "mvel"
-	when
-		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-3" )
-	then
-		Group group = new Group("Page-3");
-		group.setLabel("Purchase Details");
-		group.setPresentationStyles({"section"});
-		insert(group);
-		$questionnaire.addItem( "Page-3" );
-		update( $questionnaire );		
-end
-
-rule "Page_Page-2_5"
-dialect "mvel"
-	when
-		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-2" )
-	then
-		Group group = new Group("Page-2");
-		group.setLabel("Extras Fitted");
-		group.setPresentationStyles({"section"});
-		insert(group);
-		$questionnaire.addItem( "Page-2" );
-		update( $questionnaire );		
-end
-
-rule "Page_Page-1_4"
-dialect "mvel"
-	when
-		$questionnaire : Questionnaire ( id == "Example-Quote", items == null || items not contains "Page-1" )
-	then
-		Group group = new Group("Page-1");
-		group.setLabel("Car Details");
-		group.setPresentationStyles({"section"});
-		insert(group);
-		$questionnaire.addItem( "Page-1" );
+		$questionnaire.addItem( "Simple-Questions" );
 		update( $questionnaire );		
 end
 

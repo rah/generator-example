@@ -1,0 +1,25 @@
+package org.tohu.generator;
+ /*
+  * This package has been generated using Tohu Generator
+  * Do not modify by hand if you wish to regenerate
+  */
+import org.tohu.Questionnaire;
+import org.tohu.Group;
+import org.tohu.Question;
+
+rule "Question_Note-Q-1_1"
+dialect "mvel"
+	when
+		$g : Group ( id == "Notes", items == null || items not contains "Note-Q-1" )
+	then
+		Question question = new Question("Note-Q-1");
+		question.setPreLabel("A question with help text");
+		question.setAnswerType("text");
+		question.setPresentationStyles({"none"});
+		question.setRequired(false);
+		insert(question);
+		$g.addItem( "Note-Q-1" );
+		update( $g );		
+end
+
+

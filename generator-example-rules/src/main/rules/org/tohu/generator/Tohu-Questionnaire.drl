@@ -9,10 +9,10 @@ rule "Questionnaire_1"
 	when
 		// no conditions here
 	then
-		Questionnaire questionnaire = new Questionnaire("Example-Quote");
+		Questionnaire questionnaire = new Questionnaire("Example-Generator");
 		questionnaire.setLabel("A multi page questionnaire example");
 		questionnaire.setCompletionAction("extract.pdf");
-		questionnaire.setActiveItem("Page-1");
+		questionnaire.setActiveItem("Simple-Questions");
 		insertLogical(questionnaire);		
 end
 
