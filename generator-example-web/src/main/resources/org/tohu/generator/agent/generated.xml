@@ -21,6 +21,8 @@
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P5-Notes.drl"/>
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P6-Questions.drl"/>
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P6-Validations.drl"/>
+    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P7-Questions.drl"/>
+    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P7-Validations.drl"/>
     
   </add>
 </change-set>
