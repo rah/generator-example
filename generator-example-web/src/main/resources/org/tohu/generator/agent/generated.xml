@@ -19,6 +19,8 @@
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P4-Conditional-Questions.drl"/>
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P5-Questions.drl"/>
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P5-Notes.drl"/>
+    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P6-Questions.drl"/>
+    <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/P6-Validations.drl"/>
     
   </add>
 </change-set>
