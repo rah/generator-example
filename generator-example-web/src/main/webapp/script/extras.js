@@ -1,7 +1,7 @@
 function onActionEvent(actionID, actionType, action) {
 	// Overriding because "requiredMissing" errors are hidden so we need to inform user that all fields are required. 
 	if (actionType == "showError") {
-		alert("We are unable to process your quote until you answer all the questions marked with *");
+		alert("We are unable to process your application until you answer all the questions marked with *");
 		return true;
 	}
 	return false;
