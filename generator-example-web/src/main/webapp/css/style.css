@@ -13,6 +13,10 @@
 	padding:0;	
 }
 
+.inlineGroup {
+	display: inline
+}
+
 .InvalidAnswer {
 	font-weight:700;
 	background:#FBE3E4 url(../images/error-reporting.png) no-repeat scroll 5px center;

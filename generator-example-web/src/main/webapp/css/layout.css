@@ -12,14 +12,14 @@ body {
 }
 
 #container {
-	width: 660px;
+	width: 90%;
 	padding: 0;
 	margin: 0 auto;
 }
 
 #wrapper {
 	float:left;
-	width: 660px;
+	width: 90%;
 	margin:0;
 	padding:0;	
 }
