@@ -1,0 +1,73 @@
+package org.tohu.generator
+
+import org.drools.builder.KnowledgeBuilder;
+import org.drools.builder.KnowledgeBuilderError;
+import org.drools.builder.KnowledgeBuilderErrors;
+import org.drools.builder.KnowledgeBuilderFactory;
+import org.drools.builder.ResourceType;
+import org.drools.io.ResourceFactory;
+
+import org.drools.decisiontable.ExternalSpreadsheetCompiler;
+
+import org.tohu.Group;
+import org.tohu.generator.SpreadSheetControl;
+
+import java.io.StringReader;
+import java.io.InputStream;
+import java.io.FileInputStream;
+
+query "get groups"
+	$group : Group ()
+end
+
+rule "create a knowledge builder"
+when
+	not KnowledgeBuilder ()
+then
+	KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
+	insert (kbuilder);
+end
+
+rule "create a spreadsheet compiler"
+when
+	not ExternalSpreadsheetCompiler ()
+then
+	ExternalSpreadsheetCompiler compiler = new ExternalSpreadsheetCompiler();
+	insert (compiler);
+end
+
+rule "compile spreadsheet and add to knowledge base"
+
+when
+	$knowledgeBuilder : KnowledgeBuilder ()
+	$compiler : ExternalSpreadsheetCompiler ()
+	$control : SpreadSheetControl (processed == false);
+then
+	try {
+		InputStream spreadsheetStream = new FileInputStream($control.getSpreadSheet());
+//		InputStream templateStream = drools.getClass().getResourceAsStream($control.getTemplate());
+		InputStream templateStream = new FileInputStream($control.getTemplate());
+		String worksheet = $control.getWorksheet();
+		int row = $control.getRow();
+		int column = $control.getColumn();
+
+		String drl = $compiler.compile(spreadsheetStream, worksheet, templateStream, row, column);
+		System.out.println(drl);
+		$knowledgeBuilder.add(ResourceFactory.newReaderResource(new StringReader(drl)), org.drools.builder.ResourceType.DRL );
+		
+		KnowledgeBuilderErrors errors = $knowledgeBuilder.getErrors();
+		if (errors.size() > 0) {
+			for (KnowledgeBuilderError error: errors) {
+				System.err.println(error);
+			}
+			throw new IllegalArgumentException("Could not parse knowledge.");
+		}
+		
+		kcontext.getKnowledgeRuntime().getKnowledgeBase().addKnowledgePackages($knowledgeBuilder.getKnowledgePackages());
+	} catch (Throwable t) {
+			t.printStackTrace();
+	}
+	$control.setProcessed(true);
+	update ($control);
+end
+
