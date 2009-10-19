@@ -37,14 +37,17 @@ public class DecisionTableTest {
 			StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
 			KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
 
+			// fire rules to generate new rules and add to kbase
 			ksession.fireAllRules();
-//			ksession.fireAllRules();
-//			
-//			QueryResults results = ksession.getQueryResults( "get groups" );
-//			for ( QueryResultsRow row : results ) {
-//			    Group group = ( Group ) row.get( "group" );
-//			    System.out.println("Group : " + group.getLabel());
-//			}		
+
+			// fire again to fire the new rules that have been inserted
+			ksession.fireAllRules();
+			
+			QueryResults results = ksession.getQueryResults( "get groups" );
+			for ( QueryResultsRow row : results ) {
+			    Group group = ( Group ) row.get( "$group" );
+			    System.out.println("Group : " + group.getLabel());
+			}		
 			
 			logger.close();
 		} catch (Throwable t) {

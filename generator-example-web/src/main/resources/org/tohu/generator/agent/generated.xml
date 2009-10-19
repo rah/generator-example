@@ -7,6 +7,12 @@
     <resource type="DRL" source="classpath:org/tohu/Queries.drl" />
     <resource type="DRL" source="classpath:org/tohu/Question.drl" />
     <resource type="DRL" source="classpath:org/tohu/ReadOnly.drl" />
+
+<!--    Cannot use the following until bug fixed with KnowledgeAgent JBRULES-2230 -->
+<!--    <resource type="DRL" source="file:/home/u313846/projects/generator-example/generator-example-rules/src/main/rules/org/tohu/generator/TohuBuilder.drl"/>-->
+<!--    <resource type="DTABLE" source="file:/home/u313846/projects/generator-example/generator-example-rules/src/main/rules/org/tohu/generator/TohuDtableLoader.xls">-->
+<!--    	<decisiontable-conf input-type="XLS" worksheet-name="Control" />-->
+<!--    </resource>-->
     
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/Tohu-Questionnaire.drl"/>
     <resource type="DRL" source="file:../generator-example-rules/src/main/rules/org/tohu/generator/Tohu-Pages.drl"/>

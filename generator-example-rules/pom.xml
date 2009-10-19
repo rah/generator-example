@@ -37,51 +37,52 @@
 			</resource>
 		</resources>
 		<plugins>
-			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>generate-sources</phase>
-						<configuration>
-							<tasks>
-								<java classname="org.tohu.generator.TohuTemplateRunner" fork="true">
-									<arg
-										value="${basedir}/${spreadsheet.resources.dir}/${spreadsheet.resource.name}" />
-									<arg value="${control.worksheet}" />
-									<arg value="${control.template}" />
-									<arg value="${control.row}" />
-									<arg value="${control.column}" />
-									<classpath>
-										<pathelement
-											path="${settings.localRepository}/org/tohu/tohu-generator/1.0.1-SNAPSHOT/tohu-generator-1.0.1-SNAPSHOT.jar" />
-										<pathelement
-											path="${settings.localRepository}/jexcelapi/jxl/2.4.2/jxl-2.4.2.jar" />
-										<pathelement
-											path="${settings.localRepository}/org/mvel/mvel2/2.0.12/mvel2-2.0.12.jar" />
-										<pathelement
-											path="${settings.localRepository}/org/antlr/antlr-runtime/3.1.1/antlr-runtime-3.1.1.jar" />
-										<pathelement
-											path="${settings.localRepository}/org/drools/drools-api/${drools.version}/drools-api-${drools.version}.jar" />
-										<pathelement
-											path="${settings.localRepository}/org/drools/drools-core/${drools.version}/drools-core-${drools.version}.jar" />
-										<pathelement
-											path="${settings.localRepository}/org/drools/drools-compiler/${drools.version}/drools-compiler-${drools.version}.jar" />
-										<pathelement
-											path="${settings.localRepository}/org/drools/drools-decisiontables/${drools.version}/drools-decisiontables-${drools.version}.jar" />
-										<pathelement
-											path="${settings.localRepository}/org/drools/drools-templates/${drools.version}/drools-templates-${drools.version}.jar" />
-										<pathelement
-											path="${settings.localRepository}/org/eclipse/jdt/core/3.4.2.v_883_R34x/core-3.4.2.v_883_R34x.jar" />
-									</classpath>
-								</java>
-							</tasks>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+<!--			<plugin>-->
+<!--				<artifactId>maven-antrun-plugin</artifactId>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<phase>generate-sources</phase>-->
+<!--						<configuration>-->
+<!--							<tasks>-->
+<!--								<java classname="org.tohu.generator.TohuTemplateRunner"-->
+<!--									fork="true">-->
+<!--									<arg-->
+<!--										value="${basedir}/${spreadsheet.resources.dir}/${spreadsheet.resource.name}" />-->
+<!--									<arg value="${control.worksheet}" />-->
+<!--									<arg value="${control.template}" />-->
+<!--									<arg value="${control.row}" />-->
+<!--									<arg value="${control.column}" />-->
+<!--									<classpath>-->
+<!--										<pathelement-->
+<!--											path="${settings.localRepository}/org/tohu/tohu-generator/1.0.1-SNAPSHOT/tohu-generator-1.0.1-SNAPSHOT.jar" />-->
+<!--										<pathelement-->
+<!--											path="${settings.localRepository}/jexcelapi/jxl/2.4.2/jxl-2.4.2.jar" />-->
+<!--										<pathelement-->
+<!--											path="${settings.localRepository}/org/mvel/mvel2/2.0.12/mvel2-2.0.12.jar" />-->
+<!--										<pathelement-->
+<!--											path="${settings.localRepository}/org/antlr/antlr-runtime/3.1.1/antlr-runtime-3.1.1.jar" />-->
+<!--										<pathelement-->
+<!--											path="${settings.localRepository}/org/drools/drools-api/${drools.version}/drools-api-${drools.version}.jar" />-->
+<!--										<pathelement-->
+<!--											path="${settings.localRepository}/org/drools/drools-core/${drools.version}/drools-core-${drools.version}.jar" />-->
+<!--										<pathelement-->
+<!--											path="${settings.localRepository}/org/drools/drools-compiler/${drools.version}/drools-compiler-${drools.version}.jar" />-->
+<!--										<pathelement-->
+<!--											path="${settings.localRepository}/org/drools/drools-decisiontables/${drools.version}/drools-decisiontables-${drools.version}.jar" />-->
+<!--										<pathelement-->
+<!--											path="${settings.localRepository}/org/drools/drools-templates/${drools.version}/drools-templates-${drools.version}.jar" />-->
+<!--										<pathelement-->
+<!--											path="${settings.localRepository}/org/eclipse/jdt/core/3.4.2.v_883_R34x/core-3.4.2.v_883_R34x.jar" />-->
+<!--									</classpath>-->
+<!--								</java>-->
+<!--							</tasks>-->
+<!--						</configuration>-->
+<!--						<goals>-->
+<!--							<goal>run</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
@@ -137,6 +138,13 @@
 			<artifactId>tohu-generator</artifactId>
 			<version>1.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.3.1</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 </project>

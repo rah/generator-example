@@ -36,8 +36,8 @@ then
 	insert (compiler);
 end
 
-rule "compile spreadsheet and add to knowledge base"
 
+rule "compile spreadsheet and add to knowledge base"
 when
 	$knowledgeBuilder : KnowledgeBuilder ()
 	$compiler : ExternalSpreadsheetCompiler ()
