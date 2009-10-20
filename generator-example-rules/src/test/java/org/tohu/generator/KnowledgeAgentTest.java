@@ -6,6 +6,8 @@ import static org.junit.Assert.fail;
 
 import org.drools.KnowledgeBase;
 import org.drools.KnowledgeBaseFactory;
+import org.drools.agent.KnowledgeAgent;
+import org.drools.agent.KnowledgeAgentFactory;
 import org.drools.builder.DecisionTableConfiguration;
 import org.drools.builder.DecisionTableInputType;
 import org.drools.builder.KnowledgeBuilder;
@@ -26,14 +28,19 @@ import org.tohu.InvalidAnswer;
 /**
  * Simple Decision Table Test
  */
-public class DecisionTableTest {
+public class KnowledgeAgentTest {
 
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testControlDrl() throws Exception {
+		
+		String url = "file:/Users/rah/projects/generator-example/generator-example-rules/src/test/resources/test.xml";
+		
 		try {
-			// load up the knowledge base
-			KnowledgeBase kbase = readKnowledgeBase();
+			KnowledgeAgent kagent = KnowledgeAgentFactory.newKnowledgeAgent( "MyAgent" );
+			kagent.applyChangeSet( ResourceFactory.newUrlResource( url ) );
+
+			KnowledgeBase kbase = kagent.getKnowledgeBase();
 			StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
 			KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
 

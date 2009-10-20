@@ -16,6 +16,7 @@ import java.io.StringReader;
 import java.io.InputStream;
 import java.io.FileInputStream;
 
+# This query is for testing purposes only
 query "get groups"
 	$group : Group ()
 end
@@ -69,5 +70,16 @@ then
 	}
 	$control.setProcessed(true);
 	update ($control);
+end
+
+
+rule "fire rules when all rules added"
+# Inserts a dummy fact to cause the rules to fire again and build the questionairre
+when
+	forall ( SpreadSheetControl( processed == true ))
+	not ($string : String ( eval (new String("Dummy").equals($string))) ) 
+	
+then
+	insert (new String("Dummy"));
 end
 

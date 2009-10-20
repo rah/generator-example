@@ -1,0 +1,24 @@
+<change-set xmlns='http://drools.org/drools-5.0/change-set' xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'
+  xs:schemaLocation='http://drools.org/drools-5.0/change-set drools-change-set-5.0.xsd'>
+  <add>
+<!--    <resource type="DRL" source="classpath:org/tohu/Active.drl" />-->
+<!--    <resource type="DRL" source="classpath:org/tohu/Changes.drl" />-->
+<!--    <resource type="DRL" source="classpath:org/tohu/Item.drl" />-->
+<!--    <resource type="DRL" source="classpath:org/tohu/Queries.drl" />-->
+<!--    <resource type="DRL" source="classpath:org/tohu/Question.drl" />-->
+<!--    <resource type="DRL" source="classpath:org/tohu/ReadOnly.drl" />-->
+
+<!--    Cannot use the following until bug fixed with KnowledgeAgent JBRULES-2230 -->
+<!--    <resource type="DRL" source="file:/home/u313846/projects/generator-example/generator-example-rules/src/main/rules/org/tohu/generator/TohuBuilder.drl"/>-->
+<!--    <resource type="DTABLE" source="file:/home/u313846/projects/generator-example/generator-example-rules/src/main/rules/org/tohu/generator/TohuDtableLoader.xls">-->
+<!--    	<decisiontable-conf input-type="XLS" worksheet-name="Control" />-->
+<!--    </resource>-->
+
+<!--    Cannot use the following until bug fixed with KnowledgeAgent JBRULES-2230 -->
+    <resource type="DRL" source="file:/Users/rah/Projects/generator-example/generator-example-rules/src/main/rules/org/tohu/generator/TohuBuilder.drl"/>
+    <resource type="DTABLE" source="file:/Users/rah/Projects/generator-example/generator-example-rules/src/main/rules/org/tohu/generator/TohuDtableLoader.xls">
+      <decisiontable-conf input-type="XLS" worksheet-name="Control" />
+    </resource>
+    
+  </add>
+</change-set>
